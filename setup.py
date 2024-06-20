@@ -8,8 +8,8 @@ def get_requirements(file_path:str)->List[str]:
     '''
     requirements=[]
     with open(file_path) as file_obj:
-        requirements=file_obj.readlines()
-        requirements=[req.replace("\n","") for req in requirements]
+        requirements=file_obj.readlines() # for read line for pickup the line one-by-one
+        requirements=[req.replace("\n","") for req in requirements] # If we  use requrements.txt than /n automatically added after all libearies so we replace it.
 
         if HYPEN_E_DOT in requirements:
             requirements.remove(HYPEN_E_DOT)
